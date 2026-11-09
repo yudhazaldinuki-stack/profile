@@ -547,7 +547,6 @@
       },
       contact: function () {
         return 'in <a class="t-c" href="https://linkedin.com/in/yudhazaldi-nuki" target="_blank" rel="noopener">linkedin.com/in/yudhazaldi-nuki</a>\n' +
-          '◎  <a class="t-c" href="https://instagram.com/Yuzanups" target="_blank" rel="noopener">@Yuzanups</a>\n' +
           '&lt;/&gt; <a class="t-c" href="https://github.com/yudhazaldinuki-stack/profile" target="_blank" rel="noopener">github.com/yudhazaldinuki-stack/profile</a>';
       },
       ls: function () {
