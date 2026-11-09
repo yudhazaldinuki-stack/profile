@@ -28,10 +28,10 @@
   root.add(group);
 
   /* ---------- lights ---------- */
-  scene.add(new THREE.AmbientLight(0x404060, 0.6));
+  scene.add(new THREE.AmbientLight(0x404040, 0.6));
   var l1 = new THREE.PointLight(0x22d3ee, 2.2, 30); l1.position.set(5, 4, 5); scene.add(l1);
-  var l2 = new THREE.PointLight(0x8b5cf6, 2.4, 30); l2.position.set(-5, -2, 4); scene.add(l2);
-  var l3 = new THREE.PointLight(0xf472b6, 1.8, 30); l3.position.set(0, -5, -3); scene.add(l3);
+  var l2 = new THREE.PointLight(0xffffff, 1.4, 30); l2.position.set(-5, -2, 4); scene.add(l2);
+  var l3 = new THREE.PointLight(0x22d3ee, 1.2, 30); l3.position.set(0, -5, -3); scene.add(l3);
 
   /* ---------- morphing core ---------- */
   var geo = new THREE.IcosahedronGeometry(1.55, 6);
@@ -40,7 +40,7 @@
   geo.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 2.2);
 
   var coreMat = new THREE.MeshStandardMaterial({
-    color: 0x151833, emissive: 0x0a0c22, metalness: 0.75, roughness: 0.22, flatShading: true
+    color: 0x15171c, emissive: 0x050608, metalness: 0.75, roughness: 0.22, flatShading: true
   });
   var core = new THREE.Mesh(geo, coreMat);
   group.add(core);
@@ -55,8 +55,8 @@
   glowCanvas.width = glowCanvas.height = 128;
   var gctx = glowCanvas.getContext('2d');
   var grd = gctx.createRadialGradient(64, 64, 0, 64, 64, 64);
-  grd.addColorStop(0, 'rgba(139,92,246,0.9)');
-  grd.addColorStop(0.4, 'rgba(34,211,238,0.25)');
+  grd.addColorStop(0, 'rgba(34,211,238,0.55)');
+  grd.addColorStop(0.4, 'rgba(34,211,238,0.12)');
   grd.addColorStop(1, 'rgba(0,0,0,0)');
   gctx.fillStyle = grd; gctx.fillRect(0, 0, 128, 128);
   var glow = new THREE.Sprite(new THREE.SpriteMaterial({
@@ -73,15 +73,15 @@
     );
     return m;
   }
-  var ringA = ring(2.55, 0x8b5cf6, 0.7); ringA.rotation.set(1.2, 0.3, 0); group.add(ringA);
-  var ringB = ring(3.05, 0x22d3ee, 0.45); ringB.rotation.set(-0.9, 0.8, 0.2); group.add(ringB);
-  var ringC = ring(3.6, 0xf472b6, 0.25); ringC.rotation.set(0.3, -1.1, 0.5); group.add(ringC);
+  var ringA = ring(2.55, 0x22d3ee, 0.6); ringA.rotation.set(1.2, 0.3, 0); group.add(ringA);
+  var ringB = ring(3.05, 0xe9ebf5, 0.22); ringB.rotation.set(-0.9, 0.8, 0.2); group.add(ringB);
+  var ringC = ring(3.6, 0x22d3ee, 0.18); ringC.rotation.set(0.3, -1.1, 0.5); group.add(ringC);
 
   var satGeo = new THREE.SphereGeometry(0.07, 16, 16);
   var sats = [
-    { ring: ringA, r: 2.55, speed: 0.6, phase: 0, color: 0xf472b6 },
-    { ring: ringB, r: 3.05, speed: -0.4, phase: 2, color: 0x22d3ee },
-    { ring: ringC, r: 3.6, speed: 0.3, phase: 4, color: 0xc4b5fd }
+    { ring: ringA, r: 2.55, speed: 0.6, phase: 0, color: 0x22d3ee },
+    { ring: ringB, r: 3.05, speed: -0.4, phase: 2, color: 0xe9ebf5 },
+    { ring: ringC, r: 3.6, speed: 0.3, phase: 4, color: 0x22d3ee }
   ].map(function (s) {
     s.mesh = new THREE.Mesh(satGeo, new THREE.MeshBasicMaterial({ color: s.color }));
     s.ring.add(s.mesh);
@@ -96,7 +96,7 @@
     var x = c.getContext('2d');
     x.font = '600 30px JetBrains Mono, monospace';
     x.textAlign = 'center'; x.textBaseline = 'middle';
-    x.fillStyle = i % 3 === 0 ? '#22d3ee' : (i % 3 === 1 ? '#c4b5fd' : '#f472b6');
+    x.fillStyle = i % 2 === 0 ? '#22d3ee' : '#e9ebf5';
     x.fillText(w, 128, 32);
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({
       map: new THREE.CanvasTexture(c), transparent: true, opacity: 0.55, depthWrite: false
@@ -113,7 +113,7 @@
   var N = window.innerWidth < 700 ? 900 : 1800;
   var starPos = new Float32Array(N * 3);
   var starCol = new Float32Array(N * 3);
-  var palette = [new THREE.Color(0x22d3ee), new THREE.Color(0x8b5cf6), new THREE.Color(0xf472b6), new THREE.Color(0xffffff)];
+  var palette = [new THREE.Color(0x22d3ee), new THREE.Color(0xe9ebf5), new THREE.Color(0xe9ebf5)];
   for (var i = 0; i < N; i++) {
     var r = 5 + Math.random() * 16;
     var th = Math.random() * Math.PI * 2;
@@ -139,7 +139,7 @@
   var raycaster = new THREE.Raycaster();
   var hovering = false;
   var pulse = 0;
-  var hue = 0.52;
+  var wireAccent = true;
   var scrollP = 0;
 
   window.addEventListener('pointermove', function (e) {
@@ -154,8 +154,8 @@
     if (e.target.closest('a, button')) return;
     if (!hovering && window.matchMedia('(hover: hover)').matches) return;
     pulse = 1;
-    hue = (hue + 0.17) % 1;
-    wireMat.color.setHSL(hue, 0.85, 0.6);
+    wireAccent = !wireAccent;
+    wireMat.color.set(wireAccent ? 0x22d3ee : 0xe9ebf5);
     document.dispatchEvent(new CustomEvent('core:pulse'));
   });
 

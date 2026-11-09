@@ -373,7 +373,7 @@
 
   function confetti(x, y, count) {
     if (reduce) return;
-    var colors = ['#22d3ee', '#8b5cf6', '#f472b6', '#4ade80', '#fde047'];
+    var colors = ['#22d3ee', '#22d3ee', '#e9ebf5', '#8d93ab'];
     x = x == null ? innerWidth / 2 : x;
     y = y == null ? innerHeight / 2 : y;
     for (var i = 0; i < (count || 140); i++) {
@@ -427,7 +427,7 @@
         for (var i = 0; i < drops.length; i++) {
           var ch = glyphs[(Math.random() * glyphs.length) | 0];
           var y = drops[i] * 16;
-          ctx.fillStyle = Math.random() > 0.96 ? '#ffffff' : (i % 7 === 0 ? '#22d3ee' : '#4ade80');
+          ctx.fillStyle = Math.random() > 0.96 ? '#ffffff' : (i % 7 === 0 ? '#e9ebf5' : '#22d3ee');
           ctx.fillText(ch, i * 16, y);
           if (y > H && Math.random() > 0.975) drops[i] = 0;
           drops[i] += 1;
@@ -652,7 +652,7 @@
   /* ---------------- Console greeting ---------------- */
   function hello() {
     try {
-      console.log('%c YN. ', 'background:linear-gradient(90deg,#22d3ee,#8b5cf6,#f472b6);color:#07080d;font:700 28px monospace;padding:6px 12px;border-radius:8px');
+      console.log('%c YN. ', 'background:#22d3ee;color:#07080d;font:700 28px monospace;padding:6px 12px;border-radius:8px');
       console.log('%cHalo, developer! 👋 Suka mengintip source code? Kita pasti cocok.\n✉ yudhazaldi.nuki@gmail.com', 'color:#22d3ee;font:14px monospace');
     } catch (e) { /* ignore */ }
   }
