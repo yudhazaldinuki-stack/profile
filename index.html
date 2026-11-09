@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yudhazaldi Nuki Putrasadi — Full-Stack Web Developer</title>
+  <meta name="description" content="Portofolio Yudhazaldi Nuki Putrasadi — Full-Stack Web Developer & Senior System Programmer dengan 8+ tahun pengalaman membangun sistem enterprise di industri asuransi dan logistik.">
+  <meta name="theme-color" content="#07080d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yudhazaldi Nuki Putrasadi — Full-Stack Web Developer">
+  <meta property="og:description" content="8+ tahun membangun sistem enterprise: PHP, Laravel, CodeIgniter, SQL Server, middleware & payment gateway.">
+  <meta property="og:image" content="assets/img/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='.55' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307080d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='monospace' font-weight='700' font-size='28' fill='url(%23g)'%3EYN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <noscript><style>#loader{display:none}</style></noscript>
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader" aria-hidden="true">
+    <div class="boot">
+      <p class="boot-line"><span class="ok">[ OK ]</span> Memuat kernel portofolio…</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Menghubungkan ke database pengalaman (8+ tahun)</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Kompilasi PHP · Laravel · CodeIgniter</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Sinkronisasi middleware &amp; payment gateway</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Merender dunia 3D…</p>
+      <div class="boot-bar"><i></i></div>
+      <p class="boot-pct">0%</p>
+    </div>
+  </div>
+
+  <!-- ============ CURSOR / FX ============ -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" data-hover>
+      <span class="logo-mark">YN</span><span class="logo-dot">.</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+      <a href="#about">Tentang</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#projects">Proyek</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#terminal-section">Terminal</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+    <a href="#contact" class="btn btn-sm btn-glow nav-cta" data-magnetic>Hire me</a>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas id="hero3d" aria-hidden="true"></canvas>
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="hero-eyebrow intro"><span class="pulse-dot"></span> Tersedia untuk proyek &amp; kolaborasi</p>
+        <h1 class="hero-title intro">
+          <span class="hero-hi">Halo, saya</span>
+          <span class="name-line" data-split>Yudhazaldi</span>
+          <span class="name-line grad" data-split>Nuki Putrasadi</span>
+        </h1>
+        <p class="hero-role intro"><span class="mono">&gt;</span> <span id="typed"></span><span class="caret">_</span></p>
+        <p class="hero-lead intro">Saya membangun sistem enterprise yang stabil dan cepat — dari core system asuransi, middleware real-time, sampai integrasi payment gateway.</p>
+        <div class="hero-ctas intro">
+          <a href="#experience" class="btn btn-glow" data-magnetic>Lihat Pengalaman</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic>Hubungi Saya</a>
+        </div>
+        <ul class="hero-meta intro">
+          <li><b>8+</b> tahun pengalaman</li>
+          <li><b>PHP</b> · Laravel · CI</li>
+          <li><b>SQL Server</b> · PostgreSQL · MySQL</li>
+        </ul>
+      </div>
+      <p class="hero-hint intro" aria-hidden="true">Gerakkan kursor · klik objek 3D</p>
+      <a href="#about" class="scroll-cue" aria-label="Gulir ke bawah"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>PHP</span><span>Laravel</span><span>CodeIgniter 4</span><span>REST API</span><span>Middleware</span><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>Payment Gateway</span><span>jQuery</span><span>Bootstrap</span><span>Android · Java</span><span>Nginx</span><span>Linux</span>
+        <span>PHP</span><span>Laravel</span><span>CodeIgniter 4</span><span>REST API</span><span>Middleware</span><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>Payment Gateway</span><span>jQuery</span><span>Bootstrap</span><span>Android · Java</span><span>Nginx</span><span>Linux</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo" data-reveal>
+          <div class="photo-card" data-tilt="14">
+            <img src="assets/img/profile.jpg" alt="Foto Yudhazaldi Nuki Putrasadi" width="332" height="356">
+            <div class="holo"></div>
+            <div class="photo-tag mono">&lt;dev mode="on" /&gt;</div>
+          </div>
+          <svg class="orbit-text" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="circle" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+            <text><textPath href="#circle">FULL-STACK DEVELOPER • SYSTEM PROGRAMMER • FULL-STACK DEVELOPER • SYSTEM PROGRAMMER •</textPath></text>
+          </svg>
+          <div class="exp-badge"><b>8+</b><span>Tahun</span></div>
+        </div>
+
+        <div class="about-text">
+          <p class="section-tag mono" data-reveal data-scramble>// 01. Tentang Saya</p>
+          <h2 class="section-title" data-reveal>Engineer di balik sistem yang <span class="grad">berjalan 24 jam.</span></h2>
+          <p data-reveal>Full-Stack Web Developer dan System Programmer berpengalaman lebih dari <b>8 tahun</b> dalam merancang, membangun, dan mengoptimalkan sistem enterprise berskala besar, khususnya di industri <b>asuransi</b> dan <b>logistik</b>.</p>
+          <p data-reveal>Keahlian mendalam pada ekosistem backend PHP (Native, CodeIgniter 3/4, Laravel), integrasi API dengan payment gateway, serta arsitektur middleware untuk sinkronisasi core system. Terampil mengelola database relasional enterprise — Microsoft SQL Server, PostgreSQL, MySQL — termasuk Stored Procedure, Trigger kompleks, dan optimasi query data bervolume tinggi.</p>
+
+          <div class="stats" data-reveal>
+            <div class="stat"><b data-count="8" data-suffix="+">0</b><span>Tahun pengalaman</span></div>
+            <div class="stat"><b data-count="7">0</b><span>Sistem dibangun</span></div>
+            <div class="stat"><b data-count="3">0</b><span>Sertifikasi</span></div>
+            <div class="stat"><b data-count="1">0</b><span>Publikasi jurnal</span></div>
+          </div>
+
+          <ul class="facts mono" data-reveal>
+            <li><span>lokasi</span> Bekasi, Jawa Barat</li>
+            <li><span>fokus</span> Asuransi &amp; Logistik</li>
+            <li><span>email</span> <button class="linklike copy-email" data-hover>yudhazaldi.nuki@gmail.com</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section-tag mono" data-reveal data-scramble>// 02. Keahlian Teknis</p>
+        <h2 class="section-title" data-reveal>Toolbox yang saya <span class="grad">kuasai.</span></h2>
+        <div class="skills-grid">
+          <div class="sphere-wrap" data-reveal>
+            <div class="sphere" id="skillSphere" data-cursor="drag">
+              <span>PHP</span><span>Laravel</span><span>CodeIgniter 4</span><span>CodeIgniter 3</span><span>OOP</span><span>MVC</span>
+              <span>REST API</span><span>Middleware</span><span>Payment Gateway</span><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span>
+              <span>Stored Procedure</span><span>Trigger</span><span>Views</span><span>Query Optimization</span><span>HTML5</span><span>CSS3</span>
+              <span>JavaScript</span><span>jQuery</span><span>Bootstrap</span><span>Responsive UI</span><span>Android Studio</span><span>Java</span>
+              <span>Git</span><span>Postman</span><span>Apache</span><span>Nginx</span><span>Linux</span><span>Windows Server</span>
+            </div>
+            <p class="sphere-hint mono">⟲ drag untuk memutar</p>
+          </div>
+
+          <div class="skill-cards">
+            <article class="card skill-card" data-tilt="8" data-reveal>
+              <div class="card-ico">⚙️</div>
+              <h3>Backend &amp; Frameworks</h3>
+              <p>PHP (Native, OOP, MVC), CodeIgniter 3 &amp; 4, Laravel, RESTful API, Middleware Architecture</p>
+              <div class="bar"><i style="--w:95%"></i></div>
+            </article>
+            <article class="card skill-card" data-tilt="8" data-reveal>
+              <div class="card-ico">🗄️</div>
+              <h3>Database</h3>
+              <p>Microsoft SQL Server, PostgreSQL, MySQL — CRUD, Stored Procedures, Triggers, Views, Query Optimization</p>
+              <div class="bar"><i style="--w:92%"></i></div>
+            </article>
+            <article class="card skill-card" data-tilt="8" data-reveal>
+              <div class="card-ico">🎨</div>
+              <h3>Frontend</h3>
+              <p>HTML5, CSS3, JavaScript, jQuery, Bootstrap, Responsive Web UI Design</p>
+              <div class="bar"><i style="--w:85%"></i></div>
+            </article>
+            <article class="card skill-card" data-tilt="8" data-reveal>
+              <div class="card-ico">📱</div>
+              <h3>Mobile &amp; Integrasi</h3>
+              <p>Android Studio (Java), Payment Gateway Integration, Third-Party API Integration</p>
+              <div class="bar"><i style="--w:80%"></i></div>
+            </article>
+            <article class="card skill-card wide" data-tilt="6" data-reveal>
+              <div class="card-ico">🧰</div>
+              <h3>Tools &amp; Environment</h3>
+              <p>Git Version Control, Postman, Apache, Nginx, Linux &amp; Windows Server</p>
+              <div class="bar"><i style="--w:88%"></i></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-tag mono" data-reveal data-scramble>// 03. Pengalaman Kerja</p>
+        <h2 class="section-title" data-reveal>Jejak di <span class="grad">industri enterprise.</span></h2>
+
+        <div class="timeline">
+          <article class="tl-item" data-reveal>
+            <div class="tl-node"></div>
+            <div class="card tl-card" data-tilt="4">
+              <div class="tl-head">
+                <div>
+                  <h3>PT. Asuransi Intra Asia</h3>
+                  <p class="tl-role">Programmer System / Full-Stack Developer</p>
+                </div>
+                <div class="tl-meta mono">
+                  <span>Agu 2022 — Agu 2025</span>
+                  <span>Jakarta Selatan · 3 tahun</span>
+                </div>
+              </div>
+              <ul class="tl-list">
+                <li><b>Pengembangan Sistem Asuransi —</b> merancang dan membangun modul sistem inti asuransi berbasis web (PHP Native, CodeIgniter, Bootstrap, jQuery) sesuai kebutuhan operasional bisnis.</li>
+                <li><b>Arsitektur Middleware —</b> membangun middleware penghubung dengan core system untuk sinkronisasi data transaksi asuransi secara real-time dan aman.</li>
+                <li><b>Integrasi Payment Gateway &amp; API —</b> konektivitas REST API dengan payment gateway untuk otomatisasi pemrosesan dan rekonsiliasi pembayaran premi.</li>
+                <li><b>Surety Bond &amp; Reporting —</b> mengembangkan Surety Bond System serta modul pelaporan enterprise untuk rekapitulasi data dan audit regulasi.</li>
+                <li><b>Optimasi Database —</b> mengelola SQL Server &amp; MySQL, merancang Stored Procedure dan Trigger untuk data bervolume tinggi.</li>
+              </ul>
+              <div class="chips"><span>PHP</span><span>CodeIgniter</span><span>SQL Server</span><span>MySQL</span><span>REST API</span><span>jQuery</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item" data-reveal>
+            <div class="tl-node"></div>
+            <div class="card tl-card" data-tilt="4">
+              <div class="tl-head">
+                <div>
+                  <h3>PT. Dunia Express Transindo</h3>
+                  <p class="tl-role">Programmer System / Web Developer</p>
+                </div>
+                <div class="tl-meta mono">
+                  <span>Okt 2020 — Nov 2021</span>
+                  <span>Jakarta Utara · 1 th 2 bln</span>
+                </div>
+              </div>
+              <ul class="tl-list">
+                <li><b>Sistem Logistik &amp; Pergudangan —</b> sistem terintegrasi untuk Warehouse Management, operasional trucking, dan Pemeriksaan Harian armada (P2H).</li>
+                <li><b>Portal Internal —</b> merancang dan meluncurkan portal internal perusahaan dengan CodeIgniter, jQuery, Bootstrap, HTML, dan MySQL.</li>
+                <li><b>Otomatisasi Alur Operasional —</b> menerjemahkan alur logistik menjadi modul aplikasi intuitif, mempercepat input data lapangan dan menekan human error.</li>
+                <li><b>Troubleshooting &amp; Dukungan —</b> investigasi bug dan optimasi query berkala untuk menjamin stabilitas sistem 24 jam.</li>
+              </ul>
+              <div class="chips"><span>CodeIgniter</span><span>MySQL</span><span>jQuery</span><span>Bootstrap</span><span>HTML</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-tag mono" data-reveal data-scramble>// 04. Sistem yang Dibangun</p>
+        <h2 class="section-title" data-reveal>Proyek <span class="grad">unggulan.</span></h2>
+
+        <div class="projects">
+          <article class="card project span-2" data-tilt="6" data-reveal>
+            <span class="p-num mono">01</span>
+            <p class="p-org mono">PT. Asuransi Intra Asia</p>
+            <h3>Core Insurance System</h3>
+            <p>Modul sistem inti asuransi berbasis web yang menopang operasional bisnis harian — dirancang dari kebutuhan proses bisnis hingga implementasi.</p>
+            <div class="chips"><span>PHP Native</span><span>CodeIgniter</span><span>Bootstrap</span><span>jQuery</span></div>
+          </article>
+          <article class="card project" data-tilt="8" data-reveal>
+            <span class="p-num mono">02</span>
+            <p class="p-org mono">PT. Asuransi Intra Asia</p>
+            <h3>Middleware Core Sync</h3>
+            <p>Penghubung ke core system untuk sinkronisasi data transaksi asuransi secara real-time dan aman.</p>
+            <div class="chips"><span>Middleware</span><span>REST API</span><span>SQL Server</span></div>
+          </article>
+          <article class="card project" data-tilt="8" data-reveal>
+            <span class="p-num mono">03</span>
+            <p class="p-org mono">PT. Asuransi Intra Asia</p>
+            <h3>Payment Gateway Integration</h3>
+            <p>Otomatisasi pemrosesan dan rekonsiliasi pembayaran premi melalui REST API payment gateway.</p>
+            <div class="chips"><span>REST API</span><span>PHP</span><span>MySQL</span></div>
+          </article>
+          <article class="card project" data-tilt="8" data-reveal>
+            <span class="p-num mono">04</span>
+            <p class="p-org mono">PT. Asuransi Intra Asia</p>
+            <h3>Surety Bond &amp; Reporting</h3>
+            <p>Sistem Surety Bond dan pelaporan enterprise untuk rekapitulasi data serta kebutuhan audit regulasi.</p>
+            <div class="chips"><span>Stored Procedure</span><span>Trigger</span><span>SQL Server</span></div>
+          </article>
+          <article class="card project" data-tilt="8" data-reveal>
+            <span class="p-num mono">05</span>
+            <p class="p-org mono">PT. Dunia Express Transindo</p>
+            <h3>Warehouse &amp; Trucking</h3>
+            <p>Manajemen pergudangan, operasional trucking, dan Pemeriksaan Harian armada (P2H) dalam satu sistem.</p>
+            <div class="chips"><span>CodeIgniter</span><span>MySQL</span><span>jQuery</span></div>
+          </article>
+          <article class="card project" data-tilt="8" data-reveal>
+            <span class="p-num mono">06</span>
+            <p class="p-org mono">PT. Dunia Express Transindo</p>
+            <h3>Portal Internal Perusahaan</h3>
+            <p>Portal internal berbasis web untuk kebutuhan operasional dan informasi karyawan.</p>
+            <div class="chips"><span>CodeIgniter</span><span>Bootstrap</span><span>MySQL</span></div>
+          </article>
+          <article class="card project span-2" data-tilt="6" data-reveal>
+            <span class="p-num mono">07</span>
+            <p class="p-org mono">Skripsi · Publikasi JTIK Vol. 6 No. 2, 2020</p>
+            <h3>Posyandu Digital (Android)</h3>
+            <p>Perancangan aplikasi Posyandu Digital berbasis Android — dipublikasikan di Jurnal Teknologi Informatika dan Komputer (JTIK).</p>
+            <div class="chips"><span>Android Studio</span><span>Java</span><span>Mobile</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <p class="section-tag mono" data-reveal data-scramble>// 05. Pendidikan &amp; Sertifikasi</p>
+        <h2 class="section-title" data-reveal>Fondasi yang <span class="grad">kuat.</span></h2>
+
+        <div class="edu-grid">
+          <article class="card edu" data-tilt="6" data-reveal>
+            <p class="edu-year mono">2018 — 2020</p>
+            <h3>Universitas Mohammad Husni Thamrin</h3>
+            <p class="edu-deg">Sarjana Komputer (S1) — Teknik Informatika</p>
+            <ul class="tl-list">
+              <li>Program Alih Jenjang (Ekstensi), lulus tepat waktu setelah D3.</li>
+              <li>Skripsi: <i>"Perancangan Aplikasi Posyandu Digital Berbasis Android"</i> — dipublikasikan di JTIK Vol. 6 No. 2, 2020.</li>
+            </ul>
+          </article>
+          <article class="card edu" data-tilt="6" data-reveal>
+            <p class="edu-year mono">2014 — 2017</p>
+            <h3>LP3I Jakarta (Kampus Bekasi)</h3>
+            <p class="edu-deg">Ahli Madya Komputer (D3) — Teknik Informatika</p>
+            <ul class="tl-list">
+              <li>Fokus: pemrograman web, rekayasa perangkat lunak, sistem basis data, algoritma terapan, dan jaringan komputer.</li>
+              <li>Lulus tepat waktu.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="sub-title mono" data-reveal>Sertifikasi &amp; Lisensi <span class="muted">— arahkan / ketuk kartu</span></h3>
+        <div class="certs">
+          <div class="cert" data-reveal tabindex="0">
+            <div class="cert-inner">
+              <div class="cert-face front"><span class="cert-ico">🏅</span><b>BNSP</b><span class="mono">2016</span></div>
+              <div class="cert-face back"><b>Junior Programming TIK</b><span>Badan Nasional Sertifikasi Profesi</span></div>
+            </div>
+          </div>
+          <div class="cert" data-reveal tabindex="0">
+            <div class="cert-inner">
+              <div class="cert-face front"><span class="cert-ico">🎖️</span><b>LSP LP3I</b><span class="mono">2016</span></div>
+              <div class="cert-face back"><b>Pemrograman Database &amp; Web Design</b><span>Lembaga Sertifikasi Profesi LP3I</span></div>
+            </div>
+          </div>
+          <div class="cert" data-reveal tabindex="0">
+            <div class="cert-inner">
+              <div class="cert-face front"><span class="cert-ico">💻</span><b>BNSP</b><span class="mono">2016</span></div>
+              <div class="cert-face back"><b>Operator Komputer</b><span>Badan Nasional Sertifikasi Profesi</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TERMINAL ============ -->
+    <section class="section" id="terminal-section">
+      <div class="container">
+        <p class="section-tag mono" data-reveal data-scramble>// 06. Terminal Interaktif</p>
+        <h2 class="section-title" data-reveal>Kenali saya lewat <span class="grad">command line.</span></h2>
+        <div class="terminal" id="terminal" data-reveal>
+          <div class="term-bar">
+            <i></i><i></i><i></i>
+            <span class="mono">visitor@yudha: ~</span>
+          </div>
+          <div class="term-body mono" id="termBody">
+            <div id="termOut"></div>
+            <label class="term-line">
+              <span class="t-prompt">visitor@yudha:~$</span>
+              <input id="termInput" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ketik perintah terminal">
+            </label>
+          </div>
+        </div>
+        <div class="term-quick" data-reveal>
+          <button class="chip-btn" data-cmd="help">help</button>
+          <button class="chip-btn" data-cmd="whoami">whoami</button>
+          <button class="chip-btn" data-cmd="skills">skills</button>
+          <button class="chip-btn" data-cmd="experience">experience</button>
+          <button class="chip-btn" data-cmd="sudo hire-me">sudo hire-me</button>
+          <button class="chip-btn" data-cmd="matrix">matrix</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <p class="section-tag mono" data-reveal data-scramble>// 07. Kontak</p>
+        <h2 class="contact-title" data-reveal>Mari bangun sesuatu<br>yang <span class="grad">luar biasa.</span></h2>
+        <p class="contact-lead" data-reveal>Punya proyek, posisi, atau ide sistem yang perlu diwujudkan? Saya siap berdiskusi.</p>
+        <div class="contact-ctas" data-reveal>
+          <a class="btn btn-glow btn-lg" href="mailto:yudhazaldi.nuki@gmail.com" data-magnetic>yudhazaldi.nuki@gmail.com</a>
+          <button class="btn btn-ghost btn-lg copy-email" data-magnetic>Salin email</button>
+        </div>
+        <div class="socials" data-reveal>
+          <a class="social card" href="https://wa.me/6285692143641" target="_blank" rel="noopener" data-tilt="12">
+            <span class="s-ico">💬</span><b>WhatsApp</b><span class="mono">+62 856-9214-3641</span>
+          </a>
+          <a class="social card" href="https://linkedin.com/in/yudhazaldi-nuki" target="_blank" rel="noopener" data-tilt="12">
+            <span class="s-ico">in</span><b>LinkedIn</b><span class="mono">/in/yudhazaldi-nuki</span>
+          </a>
+          <a class="social card" href="https://instagram.com/Yuzanups" target="_blank" rel="noopener" data-tilt="12">
+            <span class="s-ico">◎</span><b>Instagram</b><span class="mono">@Yuzanups</span>
+          </a>
+          <a class="social card" href="https://github.com/yudhazaldinuki-stack/profile" target="_blank" rel="noopener" data-tilt="12">
+            <span class="s-ico">&lt;/&gt;</span><b>GitHub</b><span class="mono">yudhazaldinuki-stack</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Yudhazaldi Nuki Putrasadi. Dibangun dengan HTML, CSS, JS &amp; Three.js.</p>
+      <p class="mono muted">psst… coba <kbd>↑ ↑ ↓ ↓ ← → ← → B A</kbd></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="assets/js/hero3d.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
