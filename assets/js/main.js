@@ -331,7 +331,7 @@
     });
   }
 
-  /* ---------------- Toast + copy email ---------------- */
+  /* ---------------- Toast ---------------- */
   var toastTimer;
   function toast(msg) {
     var t = $('.toast');
@@ -340,24 +340,6 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2200);
   }
-  var EMAIL = 'yudhazaldi.nuki@gmail.com';
-  function copyEmail() {
-    function fallback() {
-      var ta = document.createElement('textarea');
-      ta.value = EMAIL; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); } catch (e) { /* ignore */ }
-      ta.remove();
-    }
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(EMAIL).catch(fallback);
-    } else fallback();
-    toast('✔ Email disalin: ' + EMAIL);
-  }
-  function initCopy() {
-    $$('.copy-email').forEach(function (b) { b.addEventListener('click', copyEmail); });
-  }
-
   /* ---------------- FX canvas: confetti + matrix ---------------- */
   var fx = $('#fx');
   var ctx = fx.getContext('2d');
@@ -564,9 +546,7 @@
         return '🏅 Junior Programming TIK — BNSP <span class="t-m">2016</span>\n🎖️ Pemrograman Database & Web Design — LSP LP3I <span class="t-m">2016</span>\n💻 Operator Komputer — BNSP <span class="t-m">2016</span>';
       },
       contact: function () {
-        return '✉  <a class="t-c" href="mailto:yudhazaldi.nuki@gmail.com">yudhazaldi.nuki@gmail.com</a>\n' +
-          '💬 <a class="t-c" href="https://wa.me/6285692143641" target="_blank" rel="noopener">+62 856-9214-3641</a>\n' +
-          'in <a class="t-c" href="https://linkedin.com/in/yudhazaldi-nuki" target="_blank" rel="noopener">linkedin.com/in/yudhazaldi-nuki</a>\n' +
+        return 'in <a class="t-c" href="https://linkedin.com/in/yudhazaldi-nuki" target="_blank" rel="noopener">linkedin.com/in/yudhazaldi-nuki</a>\n' +
           '◎  <a class="t-c" href="https://instagram.com/Yuzanups" target="_blank" rel="noopener">@Yuzanups</a>\n' +
           '&lt;/&gt; <a class="t-c" href="https://github.com/yudhazaldinuki-stack/profile" target="_blank" rel="noopener">github.com/yudhazaldinuki-stack/profile</a>';
       },
@@ -653,7 +633,7 @@
   function hello() {
     try {
       console.log('%c YZN. ', 'background:#22d3ee;color:#07080d;font:700 28px monospace;padding:6px 12px;border-radius:8px');
-      console.log('%cHalo, developer! 👋 Suka mengintip source code? Kita pasti cocok.\n✉ yudhazaldi.nuki@gmail.com', 'color:#22d3ee;font:14px monospace');
+      console.log('%cHalo, developer! 👋 Suka mengintip source code? Kita pasti cocok.\nin linkedin.com/in/yudhazaldi-nuki', 'color:#22d3ee;font:14px monospace');
     } catch (e) { /* ignore */ }
   }
 
@@ -669,7 +649,6 @@
   initSphere();
   initTimeline();
   initCerts();
-  initCopy();
   initKonami();
   initLogo();
   initTerminal();
