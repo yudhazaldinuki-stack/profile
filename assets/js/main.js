@@ -652,7 +652,7 @@
   /* ---------------- Console greeting ---------------- */
   function hello() {
     try {
-      console.log('%c YN. ', 'background:#22d3ee;color:#07080d;font:700 28px monospace;padding:6px 12px;border-radius:8px');
+      console.log('%c YZN. ', 'background:#22d3ee;color:#07080d;font:700 28px monospace;padding:6px 12px;border-radius:8px');
       console.log('%cHalo, developer! 👋 Suka mengintip source code? Kita pasti cocok.\n✉ yudhazaldi.nuki@gmail.com', 'color:#22d3ee;font:14px monospace');
     } catch (e) { /* ignore */ }
   }
