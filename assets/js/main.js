@@ -546,7 +546,7 @@
         return '🏅 Junior Programming TIK — BNSP <span class="t-m">2016</span>\n🎖️ Pemrograman Database & Web Design — LSP LP3I <span class="t-m">2016</span>\n💻 Operator Komputer — BNSP <span class="t-m">2016</span>';
       },
       contact: function () {
-        return 'in <a class="t-c" href="https://linkedin.com/in/yudhazaldi-nuki" target="_blank" rel="noopener">linkedin.com/in/yudhazaldi-nuki</a>\n' +
+        return 'in <a class="t-c" href="https://linkedin.com/in/yudhazaldi" target="_blank" rel="noopener">linkedin.com/in/yudhazaldi</a>\n' +
           '&lt;/&gt; <a class="t-c" href="https://github.com/yudhazaldinuki-stack/profile" target="_blank" rel="noopener">github.com/yudhazaldinuki-stack/profile</a>';
       },
       ls: function () {
@@ -632,7 +632,7 @@
   function hello() {
     try {
       console.log('%c YZN. ', 'background:#22d3ee;color:#07080d;font:700 28px monospace;padding:6px 12px;border-radius:8px');
-      console.log('%cHalo, developer! 👋 Suka mengintip source code? Kita pasti cocok.\nin linkedin.com/in/yudhazaldi-nuki', 'color:#22d3ee;font:14px monospace');
+      console.log('%cHalo, developer! 👋 Suka mengintip source code? Kita pasti cocok.\nin linkedin.com/in/yudhazaldi', 'color:#22d3ee;font:14px monospace');
     } catch (e) { /* ignore */ }
   }
 
